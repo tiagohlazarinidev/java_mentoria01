@@ -1,7 +1,7 @@
 <h1> Mentoria Java - Programa 01 </h1>
 
 <h2> CalculadoraSimples </h2>
-
+<h3>Mentor: Thiago Oliveira</h3>
 <hr/>
 
 <p>Neste primeiro desafio, será testado e cobrado sua orientação a objeto, para isso deverá estudar os 4 pilares da orientação (Abstração, Encapsulamento, Polimorfismo e Herança).
