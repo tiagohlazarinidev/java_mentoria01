@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MenuCalculadora {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner leitor = new Scanner(System.in);
 
         CalculadoraSimples calc = new CalculadoraSimples();
@@ -14,15 +14,16 @@ public class MenuCalculadora {
         System.out.println("Calculadora Padrão: ");
         System.out.println("1 = Soma");
         System.out.println("2 = Subtração");
-        System.out.println("3 = Multiplicação");
-        System.out.println("4 = Potenciação");
+        System.out.println("3 = Divisao");
+        System.out.println("4 = Multiplicação");
+        System.out.println("5 = Potenciação");
 
-        System.out.println("5 = Calcular IMC ");
+        System.out.println("6= Calcular IMC ");
 
         System.out.println("CalculadoraSimples área: ");
-        System.out.println("6 = Circulo ");
-        System.out.println("7 = Quadrado ");
-        System.out.println("8 = Retângulo ");
+        System.out.println("7 = Circulo ");
+        System.out.println("8 = Quadrado ");
+        System.out.println("9 = Retângulo ");
         System.out.println("0 = Para sair ");
 
 
@@ -59,25 +60,32 @@ public class MenuCalculadora {
                     System.out.println("Multiplicação = " + calc.Multiplicacao(calc.getValorA(), calc.getValorB()));
                     break;
                 case 5:
+                    System.out.println("Base : ");
+                    calc.setValorA(leitor.nextDouble());
+                    System.out.println("Expoente : ");
+                    calc.setValorB(leitor.nextDouble());
+                    System.out.println("Multiplicação = " + calc.Potenciacao(calc.getValorA(), calc.getValorB()));
+                    break;
+                case 6:
                     System.out.println("Entre com peso (kg) : ");
                     IMC.setPeso(leitor.nextInt());
                     System.out.println("Entre com a altura (cm) : ");
                     IMC.setAltura(leitor.nextInt());
                     System.out.println("IMC = " + IMC.CalcularIMC(IMC.getPeso(), IMC.getAltura()));
                     break;
-                case 6:
+                case 7:
                     System.out.println("Digite o valor do lado: ");
                     area.setLado(leitor.nextInt());
                     System.out.println("Area do quadrado = " + area.Quadrado(area.getLado()));
                     break;
-                case 7:
+                case 8:
                     System.out.println("Digite o valor da base: ");
                     area.setBase(leitor.nextDouble());
                     System.out.println("Digite o valor da Altura: ");
                     area.setAltura(leitor.nextDouble());
                     System.out.println("Area do Retangulo = " + area.Retangulo(area.getBase(), area.getAltura()));
                     break;
-                case 8:
+                case 9:
                     System.out.println("Digite o valor do raio: ");
                     area.setRaio(leitor.nextDouble());
                     System.out.println("Area do Circulo = " + area.Circulo(area.getRaio()));

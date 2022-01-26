@@ -27,7 +27,10 @@ public class CalculadoraSimples {
         return valorA - valorB;
     }
 
-    public double Divisao(double valorA, double valorB) {
+    public double Divisao(double valorA, double valorB) throws Exception {
+        if (valorB == 0) {
+            throw new Exception("Não pode ser divisivel por zero");
+        }
         return valorA / valorB;
     }
 
